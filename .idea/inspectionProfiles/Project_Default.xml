@@ -1,0 +1,38 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="langchain" />
+          <option value="langchain-community" />
+          <option value="langchain-core" />
+          <option value="sentence-transformers" />
+          <option value="huggingface-hub" />
+          <option value="chromadb" />
+          <option value="anthropic" />
+          <option value="streamlit" />
+          <option value="python-dotenv" />
+          <option value="torch" />
+          <option value="ccxt" />
+          <option value="ccxt-pro" />
+          <option value="aiohttp" />
+          <option value="websockets" />
+          <option value="pyyaml" />
+          <option value="numpy" />
+          <option value="pandas" />
+          <option value="scipy" />
+          <option value="statsmodels" />
+          <option value="scikit-learn" />
+          <option value="fastapi" />
+          <option value="uvicorn" />
+          <option value="jinja2" />
+          <option value="loguru" />
+          <option value="rich" />
+          <option value="pytest" />
+          <option value="pytest-asyncio" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
