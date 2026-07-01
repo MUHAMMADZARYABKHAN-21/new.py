@@ -35,7 +35,7 @@ vv=np.random.randn(12)
 
 print(vv)
 vv=np.random.randint(1,10,(12,3))
-print(vv)
+print(vv)  
 
 
 
