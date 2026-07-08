@@ -17,3 +17,5 @@ arr3 = np.array([1,2,3,4,5,6,7,8,9,10])
 
 print(arr3)        # Full array
 print(arr3[1:5])   # Slice from index 1 to 4 → [2 3 4 5]
+
+
