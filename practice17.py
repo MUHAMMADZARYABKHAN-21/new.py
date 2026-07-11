@@ -313,5 +313,4 @@ print("""
 5. Which one should you use if you don't want to modify
    the original array accidentally?
 
-Try answering these before checking your notes.
-""")
+
