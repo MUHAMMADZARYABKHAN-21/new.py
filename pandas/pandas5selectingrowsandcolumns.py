@@ -1,8 +1,34 @@
 import pandas as pd
-
+#
+# #
+# #
+# # import pandas as pd
+# #
+# # data = {
+# #     "ID": [101,102,103,104,105],
+# #     "Name": ["Ali","Sara","Ahmed","Ayesha","Hassan"],
+# #     "Age": [20,21,19,22,20],
+# #     "Math": [85,90,76,95,88],
+# #     "Physics": [78,88,81,91,86],
+# #     "Chemistry": [92,84,79,93,90]
+# # }
+# #
+# # df = pd.DataFrame(data)
+# #
+# # print(df)
+# #
+# #
+# # print(df[["Name","Math"]])
+# #
+# #
+# # print(df[["ID","Age"]])
 #
 #
-# import pandas as pd
+#
+#
+#
+#
+#
 #
 # data = {
 #     "ID": [101,102,103,104,105],
@@ -13,60 +39,67 @@ import pandas as pd
 #     "Chemistry": [92,84,79,93,90]
 # }
 #
-# df = pd.DataFrame(data)
+# x=pd.DataFrame(data)
+# print(x)
+# # print(x.iloc[1])
 #
-# print(df)
+# # print(x.iloc[0,4])
+# # print(x.iloc[4,1])
+# #
+# # print(x.iloc[3])
 #
 #
-# print(df[["Name","Math"]])
+# print(x.iloc[:,0:4])
+#
+# print(x.iloc[0])
 #
 #
-# print(df[["ID","Age"]])
-
-
-
-
+# print(x.iloc[1])
+#
+# print(x.iloc[2])
+#
+#
+# print(x.iloc[3])
+#
+#
+#
+#
+# print(x.iloc[1:4,0:3])
+#
+#
+#
+# print(x.loc[1])
+#
+#
+#
+#
+#
 
 
 
 
 data = {
-    "ID": [101,102,103,104,105],
-    "Name": ["Ali","Sara","Ahmed","Ayesha","Hassan"],
-    "Age": [20,21,19,22,20],
-    "Math": [85,90,76,95,88],
-    "Physics": [78,88,81,91,86],
-    "Chemistry": [92,84,79,93,90]
+     "ID": [101,102,103,104,105],
+     "Name": ["Ali","Sara","Ahmed","Ayesha","Hassan"],
+     "Age": [20,21,19,22,20],
+     "Math": [85,90,76,95,88],
+     "Physics": [78,88,81,91,86],
+     "Chemistry": [92,84,79,93,90]
 }
 
-x=pd.DataFrame(data)
-print(x)
-# print(x.iloc[1])
+df = pd.DataFrame(data)
+# print(df)
 
-# print(x.iloc[0,4])
-# print(x.iloc[4,1])
-#
-# print(x.iloc[3])
-
-
-print(x.iloc[:,0:4])
-
-print(x.iloc[0])
-
-
-print(x.iloc[1])
-
-print(x.iloc[2])
-
-
-print(x.iloc[3])
+# print(df.iloc[1])
+# print(df.iloc[1,1])
 
 
 
+print(df.iloc[0:2])
+print(df.loc[0:2])
 
-print(x.iloc[1:4,0:3])
 
-
+print(df.loc["Chemistry"])
 
 
 
