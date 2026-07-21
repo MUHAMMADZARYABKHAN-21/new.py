@@ -66,3 +66,39 @@ avg_chemistry = students_df["Chemistry"].mean()
 print("Average Math Score:", avg_math)
 print("Average Physics Score:", avg_physics)
 print("Average Chemistry Score:", avg_chemistry)
+
+
+
+
+
+
+
+
+
+
+Data={"NAME":["BAKHTZADA","ABUBAKAR","NOMAN"],
+      "ID":[24562,56321,6786],
+      "CGPA":[3.01,3.45,3.23]
+
+      }
+print(pd.DataFrame(Data))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
