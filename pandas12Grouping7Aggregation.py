@@ -37,12 +37,46 @@ print(df.groupby("City")["Salary"].mean())
 print(df.groupby("Department")["Salary"].sum())
 
 
+print(df.groupby("Department")["Salary"].agg(["mean","sum","count","min","max"]))
+
+
 
 print(df.groupby("City")["Salary"].max())
 
 
 
 print(df.groupby("Department")["Salary"].min())
+
+
+print(df.groupby("Department")["Employee"].count())
+
+
+
+print(df.groupby(["Department","Salary"])["Salary"].mean())
+
+
+
+print(df.groupby(["Department","Salary"])[["Salary","Experience"]].mean())
+
+
+
+
+
+
+import kagglehub
+
+# Download latest version
+path = kagglehub.dataset_download("tawfikelmetwally/employee-dataset")
+
+print("Path to dataset files:", path)
+
+
+
+
+
+
+
+
 
 
 
