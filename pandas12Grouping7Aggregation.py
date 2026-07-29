@@ -63,15 +63,6 @@ print(df.groupby(["Department","Salary"])[["Salary","Experience"]].mean())
 
 
 
-import kagglehub
-
-# Download latest version
-path = kagglehub.dataset_download("tawfikelmetwally/employee-dataset")
-
-print("Path to dataset files:", path)
-
-
-
 
 
 
