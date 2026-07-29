@@ -102,15 +102,3 @@ data = {
 df=pd.DataFrame(data)
 print(df.loc[df["Math"]>85,["Name","Age"]])
 
-
-
-print(df[df["Name"].isin(["Ali","Hassan"])])
-
-
-print([df[df["Age"].between(20,25)]])
-print(df[df["Name"].str.contains("med")])
-
-
-
-
-

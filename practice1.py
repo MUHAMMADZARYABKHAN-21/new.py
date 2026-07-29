@@ -69,8 +69,8 @@ print("Mask:", mask)
 print("Filtered Data:", data[mask], "\n")
 
 # 12. Saving & Loading
-np.save("my_array.npy", data)           # Save to file
-loaded = np.load("my_array.npy")        # Load from file
+np.save("pandas/my_array.npy", data)           # Save to file
+loaded = np.load("pandas/my_array.npy")        # Load from file
 print("Loaded Array:", loaded)
 
 
