@@ -1,20 +1,41 @@
+# # # # # # # # import pandas as pd
+# # # # # # # # import seaborn as sns
+# # # # # # # # import matplotlib.pyplot as plt
+# # # # # # # # df=pd.read_csv("Titanic1.csv")
+# # # # # # # # sns.histplot(
+# # # # # # # #     data=df,
+# # # # # # # #     x="age",
+# # # # # # # #     kde=True,
+# # # # # # # # )
+# # # # # # # # plt.show()
 # # # # # # # import pandas as pd
 # # # # # # # import seaborn as sns
 # # # # # # # import matplotlib.pyplot as plt
-# # # # # # # df=pd.read_csv("Titanic1.csv")
-# # # # # # # sns.histplot(
-# # # # # # #     data=df,
-# # # # # # #     x="age",
-# # # # # # #     kde=True,
-# # # # # # # )
+# # # # # # #
+# # # # # # # df = pd.read_csv("Titanic1.csv")
+# # # # # # #
+# # # # # # # sns.displot(data=df,x="age")
 # # # # # # # plt.show()
+# # # # # #
 # # # # # # import pandas as pd
 # # # # # # import seaborn as sns
 # # # # # # import matplotlib.pyplot as plt
+# # # # # # df=pd.read_csv("Titanic1.csv")
+# # # # # # # sns.displot(
+# # # # # # #     data=df,
+# # # # # # #     x="age",
+# # # # # # #     kde=True,
+# # # # # # #     color="blue",
+# # # # # # #     col="sex"
+# # # # # # # )
+# # # # # # sns.displot(
+# # # # # #     data=df,
+# # # # # #     x="age",
+# # # # # #     color="green",
+# # # # # #     col="sex"
+# # # # # # )
+# # # # # # plt.title("Fare distribution")
 # # # # # #
-# # # # # # df = pd.read_csv("Titanic1.csv")
-# # # # # #
-# # # # # # sns.displot(data=df,x="age")
 # # # # # # plt.show()
 # # # # #
 # # # # # import pandas as pd
@@ -30,9 +51,9 @@
 # # # # # # )
 # # # # # sns.displot(
 # # # # #     data=df,
-# # # # #     x="age",
+# # # # #     x="fare",
 # # # # #     color="green",
-# # # # #     col="sex"
+# # # # #     col="pclass"
 # # # # # )
 # # # # # plt.title("Fare distribution")
 # # # # #
@@ -41,6 +62,8 @@
 # # # # import pandas as pd
 # # # # import seaborn as sns
 # # # # import matplotlib.pyplot as plt
+# # # # from numpy.ma.core import size
+# # # #
 # # # # df=pd.read_csv("Titanic1.csv")
 # # # # # sns.displot(
 # # # # #     data=df,
@@ -52,92 +75,89 @@
 # # # # sns.displot(
 # # # #     data=df,
 # # # #     x="fare",
-# # # #     color="green",
+# # # #     row="sex",
 # # # #     col="pclass"
+# # # #
 # # # # )
 # # # # plt.title("Fare distribution")
 # # # #
-# # # # plt.show()
-# # #
-# # # import pandas as pd
-# # # import seaborn as sns
-# # # import matplotlib.pyplot as plt
-# # # from numpy.ma.core import size
-# # #
-# # # df=pd.read_csv("Titanic1.csv")
-# # # # sns.displot(
+# # # # # plt.show()
+# # # # import pandas as pd
+# # # # import seaborn as sns
+# # # # import matplotlib.pyplot as plt
+# # # #
+# # # # df = pd.read_csv("Titanic1.csv")
+# # # # sns.ecdfplot(
 # # # #     data=df,
 # # # #     x="age",
-# # # #     kde=True,
-# # # #     color="blue",
-# # # #     col="sex"
 # # # # )
-# # # sns.displot(
-# # #     data=df,
-# # #     x="fare",
-# # #     row="sex",
-# # #     col="pclass"
-# # #
-# # # )
-# # # plt.title("Fare distribution")
-# # #
 # # # # plt.show()
 # # # import pandas as pd
 # # # import seaborn as sns
 # # # import matplotlib.pyplot as plt
 # # #
 # # # df = pd.read_csv("Titanic1.csv")
-# # # sns.ecdfplot(
+# # # sns.boxplot(
 # # #     data=df,
-# # #     x="age",
+# # #     x="fare"
 # # # )
+# # # plt.title("Distribution of fare ")
 # # # plt.show()
 # # import pandas as pd
 # # import seaborn as sns
 # # import matplotlib.pyplot as plt
 # #
+# # # Load Titanic dataset
 # # df = pd.read_csv("Titanic1.csv")
-# # sns.boxplot(
-# #     data=df,
-# #     x="fare"
+# #
+# # # Select numeric columns
+# # numeric_df = df[["survived", "pclass", "age", "sibsp", "parch", "fare"]]
+# #
+# # # Drop rows with missing values (NaN) to avoid clustering errors
+# # numeric_df = numeric_df.dropna()
+# #
+# # # Create clustermap
+# # sns.clustermap(
+# #     numeric_df.corr(),   # use correlation matrix instead of raw data
+# #     annot=True,
+# #     cmap="coolwarm",
+# #     center=0
 # # )
-# # plt.title("Distribution of fare ")
+# #
 # # plt.show()
 # import pandas as pd
 # import seaborn as sns
 # import matplotlib.pyplot as plt
-#
-# # Load Titanic dataset
 # df = pd.read_csv("Titanic1.csv")
 #
-# # Select numeric columns
-# numeric_df = df[["survived", "pclass", "age", "sibsp", "parch", "fare"]]
+# plt.figure(figsize=(8,5))
 #
-# # Drop rows with missing values (NaN) to avoid clustering errors
-# numeric_df = numeric_df.dropna()
-#
-# # Create clustermap
-# sns.clustermap(
-#     numeric_df.corr(),   # use correlation matrix instead of raw data
-#     annot=True,
-#     cmap="coolwarm",
-#     center=0
+# sns.regplot(
+#     data=df,
+#     x="age",
+#     y="fare"
 # )
 #
+# plt.title("Age vs Fare")
+#
 # plt.show()
-import pandas as pd
+
+
 import seaborn as sns
 import matplotlib.pyplot as plt
-df = pd.read_csv("Titanic1.csv")
+import pandas as pd
 
-plt.figure(figsize=(8,5))
+df = sns.load_dataset("titanic")
 
-sns.regplot(
+g = sns.JointGrid(
     data=df,
-    x="age",
-    y="fare"
+    x="Age",
+    y="Fare"
 )
 
-plt.title("Age vs Fare")
+g.plot(
+    sns.scatterplot,
+    sns.histplot
+)
 
 plt.show()
