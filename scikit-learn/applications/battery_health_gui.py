@@ -1,18 +1,19 @@
 """
 Battery Health Predictor — Desktop GUI (Tkinter)
 ==================================================
-Trains your Ridge Regression pipeline on battery.csv, then opens a
+Trains a Ridge Regression pipeline on the course battery dataset, then opens a
 real desktop window with sliders to predict Battery Health.
 
 Run with:
     pip install pandas numpy scikit-learn matplotlib
-    python battery_health_gui.py
+    python applications/battery_health_gui.py
 
-Requires battery.csv in the same folder (or edit CSV_PATH below).
+The dataset is loaded from ../data/battery.csv relative to this file.
 """
 
 import tkinter as tk
 from tkinter import ttk, messagebox
+from pathlib import Path
 
 import pandas as pd
 import numpy as np
@@ -28,7 +29,7 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
-CSV_PATH = "battery.csv"
+CSV_PATH = Path(__file__).resolve().parents[1] / "data" / "battery.csv"
 
 NUMERICAL_FEATURES = [
     "Battery Age", "Daily Usage Hours", "Design Capacity", "Cycle Count",
